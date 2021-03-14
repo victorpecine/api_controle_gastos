@@ -1,14 +1,25 @@
-from django.http import JsonResponse
+from rest_framework import viewsets
+from controle_gastos_app.models import Categoria, Estabelecimento, Gasto, Usuario
+from controle_gastos_app.serializer import CategoriaSerializer, EstabelecimentoSerializer, GastoSerializer, UsuarioSerializer
 
-def gastos(request):
-    if request.method == 'GET':
-        gasto = {
-                'id_gastos':             1,
-                'id_usuario':           'Victor',
-                'id_estabelecimento':   'Garrafeiros',
-                'id_categoria':         'Bar',
-                'valor':                f'{22.50:.2f}',
-                'data_gasto':           '2021-02-12',
-                'forma_pagamento':      'Debito'
-                }
-        return JsonResponse(gasto)
+class GastosViewset(viewsets.ModelViewSet):
+    """Exibindo todos os gastos cadastrados"""
+    # trazendo todos os alunos do banco de dados
+    queryset = Gasto.objects.all
+    # classe responsável por serializar os dados
+    serializer_class = GastoSerializer
+
+class CategoriaViewset(viewsets.ModelViewSet):
+    """Exibindo todas as categorias cadastrados"""
+    queryset = Categoria.objects.all
+    serializer_class = CategoriaSerializer
+
+class EstabelecimentoViewset(viewsets.ModelViewSet):
+    """Exibindo todos os estabelecimentos cadastrados"""
+    queryset = Estabelecimento.objects.all
+    serializer_class = EstabelecimentoSerializer
+
+class UsuarioViewset(viewsets.ModelViewSet):
+    """Exibindo todos os usuários cadastrados"""
+    queryset = Usuario.objects.all
+    serializer_class = UsuarioSerializer

@@ -4,5 +4,5 @@ from controle_gastos_app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('gastos/', gastos)
+    path('gastos/', Gastos)
 ]

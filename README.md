@@ -19,5 +19,6 @@ O banco de dados utilizado foi criado no **MySQL**.
 * Todo valor tem uma forma de pagamento
 
 ## Parte II
+- [ ] URL para visualização dos estabelecimentos agrupados por categoria
 - [ ] Visualização de soma por **categoria**, **estabelecimento** e **forma de pagamento**  no MySQL
 - [ ] Visualização de soma por **categoria**, **estabelecimento** e **forma de pagamento**  no localhost:8000/admin

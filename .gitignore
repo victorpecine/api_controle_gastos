@@ -1,2 +1,4 @@
 
 *.txt
+controle_gastos_app/__pycache__/models.cpython-39.pyc
+*.pyc

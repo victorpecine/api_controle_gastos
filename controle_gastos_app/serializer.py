@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from controle_gastos_app.models import Categoria, Estabelecimento, Gasto, Usuario
+from controle_gastos_app.models import Categoria, Estabelecimento, Gasto, FormaPagamento , Usuario
 
 class GastoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,6 +14,11 @@ class CategoriaSerializer(serializers.ModelSerializer):
 class EstabelecimentoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Estabelecimento
+        fields = '__all__'
+
+class PagamentoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FormaPagamento
         fields = '__all__'
 
 class UsuarioSerializer(serializers.ModelSerializer):

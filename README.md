@@ -15,8 +15,9 @@ O banco de dados utilizado foi criado no **MySQL**.
 * Todo gasto é realizado em um estabelecimento
 * Cada estabelecimento possui apenas uma categoria
 * Uma categoria pode pertencer a vários estabelecimentos
-* Todo gasto tem um valor
-* Todo valor tem uma forma de pagamento
+* Todo gasto tem uma forma de pagamento
+
+![Diagrama relacional do BD](https://www.imagemhost.com.br/images/2021/03/15/diagrama_relacional_bd.png)
 
 ## Parte II
 - [ ] Visualização de soma por **categoria**, **estabelecimento** e **forma de pagamento**  no MySQL

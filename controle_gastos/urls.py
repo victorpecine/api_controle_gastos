@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from controle_gastos_app.views import CategoriaViewset, EstabelecimentoViewset, GastoViewset, PagamentoViewset, UsuarioViewset
+from controle_gastos_app.views import CategoriaViewset, EstabelecimentoViewset, GastoViewset, PagamentoViewset, UsuarioViewset, ListaEstabelecimentosCategoria
 from rest_framework import routers
 
 # rota principal
@@ -14,6 +14,6 @@ router.register('pagamentos', PagamentoViewset, basename='pagamentos')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
-    
+    path('', include(router.urls)),
+    path('categorias/<int:pk>/estabelecimentos/', ListaEstabelecimentosCategoria.as_view())
 ]

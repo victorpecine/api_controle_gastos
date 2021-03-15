@@ -25,3 +25,9 @@ class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
         fields = '__all__'
+
+# mostra a lista de todos os estabelecimentos de acordo com a categoria
+class ListaEstabelecimentosCategoriaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Estabelecimento
+        fields = ['nome_estabelecimento']

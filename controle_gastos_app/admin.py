@@ -3,7 +3,7 @@ from controle_gastos_app.models import Categoria, Estabelecimento, FormaPagament
 
 class Gastos(admin.ModelAdmin):
     # infos disponibilizadas na tela de admin
-    list_display = ('id', 'estabelecimento', 'forma_pagamento', 'data_pagamento')
+    list_display = ('id', 'estabelecimento', 'valor_gasto', 'forma_pagamento', 'data_pagamento')
 
     # campos que possiblitam a alteração do gasto
     list_display_links = ('estabelecimento', 'forma_pagamento')
@@ -33,9 +33,9 @@ class Estabelecimentos(admin.ModelAdmin):
 admin.site.register(Estabelecimento, Estabelecimentos)
 
 class FormasPagamento(admin.ModelAdmin):
-    list_display = ('id',)
-    list_display_links = ('id',)
-    search_fields = ('id',)
+    list_display = ('id', 'pagamento')
+    list_display_links = ('id', 'pagamento')
+    search_fields = ('id', 'pagamento')
     list_per_page = 20
 
 admin.site.register(FormaPagamento, FormasPagamento)

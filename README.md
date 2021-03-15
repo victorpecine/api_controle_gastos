@@ -11,6 +11,13 @@ O banco de dados utilizado foi criado no **MySQL**.
 - [x] URLs para acesso no localhost:8000/
 - [x] Criação de usuário admin para realizar operações CRUD
 
+* Todo gasto tem quem paga (usuário)
+* Todo gasto é realizado em um estabelecimento
+* Cada estabelecimento possui apenas uma categoria
+* Uma categoria pode pertencer a vários estabelecimentos
+* Todo gasto tem um valor
+* Todo valor tem uma forma de pagamento
+
 ## Parte II
 - [ ] Visualização de soma por **categoria**, **estabelecimento** e **forma de pagamento**  no MySQL
 - [ ] Visualização de soma por **categoria**, **estabelecimento** e **forma de pagamento**  no localhost:8000/admin

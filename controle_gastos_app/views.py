@@ -4,27 +4,27 @@ from controle_gastos_app.serializer import CategoriaSerializer, EstabelecimentoS
 
 class CategoriaViewset(viewsets.ModelViewSet):
     """Exibindo todas as categorias cadastradas"""
-    queryset = Categoria.objects.all
+    queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
 
 class EstabelecimentoViewset(viewsets.ModelViewSet):
     """Exibindo todos os estabelecimentos cadastrados"""
-    queryset = Estabelecimento.objects.all
+    queryset = Estabelecimento.objects.all()
     serializer_class = EstabelecimentoSerializer
 
 class GastoViewset(viewsets.ModelViewSet):
     """Exibindo todos os gastos cadastrados"""
     # trazendo todos os gastos do banco de dados
-    queryset = Gasto.objects.all
+    queryset = Gasto.objects.all()
     # classe responsável por serializar os dados
     serializer_class = GastoSerializer
 
 class PagamentoViewset(viewsets.ModelViewSet):
     """Exibindo todas as formas de pagamento disponíveis"""
-    queryset = FormaPagamento.objects.all
+    queryset = FormaPagamento.objects.all()
     serializer_class = PagamentoSerializer
 
 class UsuarioViewset(viewsets.ModelViewSet):
     """Exibindo todos os usuários cadastrados"""
-    queryset = Usuario.objects.all
+    queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
